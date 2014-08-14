@@ -16,6 +16,10 @@ module LitmusAnalytics
       response = @rest_client[path].post(data, {:accept => accept})
     end
 
+    def put(path, data, accept="application/json")
+      response = @rest_client[path].put(data, {:accept => accept})
+    end
+
     def get(path, params=nil, accept="application/json")
       if params
         response = @rest_client[path].get(:params => params, :accept => accept)
